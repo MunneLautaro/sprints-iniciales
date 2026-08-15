@@ -3,3 +3,4 @@
 - Fabricio Ibarra
 - Munné Lautaro
 - Lucia Ascoy
+- Ariadna Luz Chiapin
