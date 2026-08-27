@@ -4,53 +4,120 @@
     <meta charset="UTF-8" />
     <title>Mueblería Hermanos Jota</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#productos">Productos</a></li>
-          <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
+    <header class="header">
+      <div class="header__inner">
+        <a href="#bienvenida" class="header__logo" aria-label="Mueblería Hermanos Jota - Inicio">
+          <img
+            src="assets/logo.svg"
+            alt="Hermanos Jota"
+            class="header__logo-img"
+            width="120"
+            height="48"
+          />
+        </a>
+        <nav class="header__nav" aria-label="Navegación principal">
+          <ul class="header__nav-list">
+            <li><a href="#bienvenida" class="header__nav-link">Inicio</a></li>
+            <li><a href="#productos" class="header__nav-link">Productos</a></li>
+            <li><a href="#sobre-nosotros" class="header__nav-link">Sobre Nosotros</a></li>
+            <li><a href="#contacto" class="header__nav-link">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
-      <section id="bienvenida">
-        <h1>Mueblería Hermanos Jota</h1>
-        <p>
-          Desde hace 30 años, en Mueblería Hermanos Jota nos dedicamos a crear
-          muebles de calidad, combinando tradición familiar, materiales nobles y
-          diseños atemporales para transformar tu hogar en un espacio único.
-        </p>
+      <section id="bienvenida" class="hero">
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__content">
+          <h1 class="hero__title">Mueblería Hermanos Jota</h1>
+          <p class="hero__text">
+            Desde hace 30 años creamos muebles de calidad, combinando tradición
+            familiar, materiales nobles y diseños atemporales para transformar
+            tu hogar en un espacio único.
+          </p>
+          <a href="#productos" class="button hero__cta">Ver colección</a>
+        </div>
       </section>
-      <section id="productos">
-        <h2>Productos Destacados</h2>
-        <article>
-          <h3>Sofá de Esquina</h3>
-          <p>
-            Sofá amplio y cómodo, ideal para reuniones familiares. Tapizado en
-            tela de alta calidad.
-          </p>
-        </article>
-        <article>
-          <h3>Mesa de Comedor de Roble</h3>
-          <p>
-            Mesa robusta para 8 personas, fabricada en roble macizo. Un clásico
-            para tu comedor.
-          </p>
-        </article>
-        <article>
-          <h3>Silla Estilo Nórdico</h3>
-          <p>
-            Silla liviana y resistente, con diseño escandinavo perfecto para
-            cualquier ambiente.
-          </p>
-        </article>
+      <section id="productos" class="productos">
+        <div class="productos__inner">
+          <h2 class="productos__title">Productos Destacados</h2>
+          <div id="productos-grid" class="productos__grid"></div>
+        </div>
       </section>
     </main>
-    <button class="button">hola</button>
-    <button>hola</button>
+    <footer id="contacto" class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <p class="footer__name">Hermanos Jota</p>
+          <p class="footer__tagline">
+            Muebles de calidad, hechos con dedicación familiar desde hace 30
+            años.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__heading">Navegación</h2>
+          <ul class="footer__list">
+            <li><a href="#bienvenida" class="footer__link">Inicio</a></li>
+            <li><a href="#productos" class="footer__link">Productos</a></li>
+            <li><a href="#sobre-nosotros" class="footer__link">Sobre Nosotros</a></li>
+            <li><a href="#contacto" class="footer__link">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__heading">Contacto</h2>
+          <address class="footer__address">
+            <p>Av. San Juan 2847
+              C1232AAB — Barrio de San Cristóbal
+              Ciudad Autónoma de Buenos Aires
+              Argentina</p>
+            <p>
+              <a href="tel:+541112345678" class="footer__link">+54 11 4567-8900</a>
+            </p>
+            <p>
+              <a href="mailto:ventas@hermanosjota.com.ar" class="footer__link"
+                >ventas@hermanosjota.com.ar</a
+              >
+            </p>
+            <p>
+              <a href="mailto:info@hermanosjota.com.ar" class="footer__link"
+                >info@hermanosjota.com.ar</a
+              >
+            </p>
+            <p>
+              <a
+                href="https://www.instagram.com/hermanosjota_ba/"
+                class="footer__link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >@hermanosjota_ba</a
+              >
+            </p>
+          </address>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__heading">Horarios</h2>
+          <ul class="footer__list">
+            <li>Lunes a viernes: 9:00 – 19:00</li>
+            <li>Sábados: 10:00 – 14:00</li>
+            <li>Domingos: cerrado</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          &copy; 2026 Mueblería Hermanos Jota. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+    <script src="products.js"></script>
   </body>
 </html>
