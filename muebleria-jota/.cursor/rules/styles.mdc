@@ -1,0 +1,52 @@
+---
+description: Design system del proyecto Hermanos Jota — colores, tipografía, voz y uso del logo, según el Manual de Marca oficial
+globs: ["**/*.html", "**/*.css"]
+alwaysApply: true
+---
+
+# Design System — Hermanos Jota
+
+## Colores
+- Siena Tostado (primario, títulos): #A0522D
+- Verde Salvia (acento secundario, sustentabilidad): #87A96B
+- Alabastro Cálido (fondos principales): #F5E6D3
+- Vara de Oro (detalles premium/acentos): #D4A437
+- Rosa Polvoriento (acentos suaves): #C47A6D
+
+Definir todos como custom properties CSS en :root, por ejemplo:
+--color-primary: #A0522D;
+--color-secondary: #87A96B;
+--color-bg: #F5E6D3;
+--color-accent: #D4A437;
+--color-accent-soft: #C47A6D;
+
+## Tipografía
+- Primaria (texto/UI): Inter — pesos 300 (secundario/leyendas), 400 (texto principal), 500 (énfasis/subtítulos), 700 (títulos y CTAs)
+- Secundaria (títulos editoriales/citas): Playfair Display — pesos 400 y 700
+
+Uso específico:
+- Títulos principales: Playfair Display, mayúsculas, letter-spacing 0.1em
+- Texto del cuerpo: Inter Regular, 11-12pt, line-height 1.6
+- Leyendas: Inter Light, 9pt, letter-spacing 0.02em
+- Botones y CTAs: Inter Medium, mayúsculas, letter-spacing 0.08em
+
+## Logo
+- Espacio de protección: dejar libre alrededor del logo un margen igual a la altura de la "H" de "Hermanos"
+- Tamaño mínimo impresión: 25mm de ancho
+- Tamaño mínimo digital: 120px de ancho
+- Variante primaria: Siena Tostado (#A0522D) sobre fondos claros
+- Variante invertida: Alabastro Cálido (#F5E6D3) sobre fondos oscuros
+- Nunca: estirar/distorsionar, poner sobre fondos complejos o fotos, cambiar los colores, agregar sombras/degradados/bordes, ni recrear el logo
+
+## Voz y tono (para copys, textos de botones, secciones, etc.)
+- Cálida pero no empalagosa
+- Conocedora pero no pretenciosa
+- Nostálgica pero no anclada en el pasado
+- Sofisticada pero accesible
+- Apasionada pero no sermoneadora
+- Tono conversacional pero con autoridad; hablar como un asesor de confianza, no como vendedor
+
+## Reglas generales
+- Usar siempre estos valores exactos (colores, tipografías, tono), nunca inventar nuevos.
+- Cualquier texto nuevo generado para la página debe respetar la voz de marca descripta arriba.
+- Los colores deben definirse como variables CSS en :root, no hardcodeados en cada regla.
