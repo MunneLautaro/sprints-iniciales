@@ -1,4 +1,6 @@
 # sprints-iniciales
 ## Participantes:
 - Fabricio Ibarra
-- Lautaro Munne
+- Munné Lautaro
+- Lucia Ascoy
+- Ariadna Luz Chiapin
