@@ -4,3 +4,4 @@
 - Munné Lautaro
 - Lucia Ascoy
 - Ariadna Luz Chiapin
+- Sofia Belen Giovinazzo
