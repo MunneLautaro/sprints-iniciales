@@ -579,11 +579,13 @@ body {
 
   .producto-detalle__acciones {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    height: 150px;
   }
 
   .btn-carrito {
-    width: 100%;
+    width: 90%;
+    align-self: center;
   }
 
   /* Centramos el label de cantidad en mobile */

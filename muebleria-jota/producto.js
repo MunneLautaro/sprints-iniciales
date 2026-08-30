@@ -5,7 +5,6 @@ const productContainer = document.getElementById("product-container")
 async function searchProduct(id){
     let product;
     const result = await fetch("db.json").then(response => response.json()).then((arr =>{
-        console.log(arr);
         arr.forEach(element => {
             if(element.id == id){
                 product = element;
@@ -16,10 +15,13 @@ async function searchProduct(id){
     return product;
 }
 
+function capitalizeFirstLetter(str){
+    return str.charAt(0).toUpperCase() + str.slice(1)
+}
+
 async function renderProduct(event){
     const product = await searchProduct(param.get("id"));
-    console.log(param.get("id"))
-    const specificationsToArr = Object.entries(product.especificaciones)
+    const specificationsToArr = Object.entries(product.especificaciones).map(arr => arr.map(str => capitalizeFirstLetter(str)))
     
     productContainer.innerHTML = `
         <section class="producto-detalle">
@@ -34,9 +36,9 @@ async function renderProduct(event){
 
         <!-- Columna derecha: Información -->
         <div class="producto-detalle__info">
-            <h1 class="producto-detalle__titulo">${product.nombre}</h1>
+            <h1 class="producto-detalle__titulo">${capitalizeFirstLetter(product.nombre)}</h1>
             
-            <p class="producto-detalle__descripcion">${product.descripcion}</p>
+            <p class="producto-detalle__descripcion">${capitalizeFirstLetter(product.descripcion)}</p>
             
             <p class="producto-detalle__precio">$1200000</p>
 
