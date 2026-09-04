@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <title>Mueblería Hermanos Jota</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="index.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" src="products.js"></script>
+    <script type="module" src="producto.js"></script>
   </head>
   <body>
     <header class="header">
@@ -35,25 +35,8 @@
         </nav>
       </div>
     </header>
-    <main>
-      <section id="bienvenida" class="hero">
-        <div class="hero__overlay" aria-hidden="true"></div>
-        <div class="hero__content">
-          <h1 class="hero__title">Mueblería Hermanos Jota</h1>
-          <p class="hero__text">
-            Desde hace 30 años creamos muebles de calidad, combinando tradición
-            familiar, materiales nobles y diseños atemporales para transformar
-            tu hogar en un espacio único.
-          </p>
-          <a href="#productos" class="button hero__cta">Ver colección</a>
-        </div>
-      </section>
-      <section id="productos" class="productos">
-        <div class="productos__inner">
-          <h2 class="productos__title">Productos Destacados</h2>
-          <div id="productos-grid" class="productos__grid"></div>
-        </div>
-      </section>
+    <main id="product-container">
+        
     </main>
     <footer id="contacto" class="footer">
       <div class="footer__inner">
@@ -119,5 +102,6 @@
         </p>
       </div>
     </footer>
+    <script src="products.js"></script>
   </body>
 </html>
