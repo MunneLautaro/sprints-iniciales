@@ -1,0 +1,158 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Productos | Mueblería Hermanos Jota</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="stylesheet" href="index.css" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
+
+<script type="module" src="products.js"></script>
+
+  </head>  <body>
+    <header class="header">
+      <div class="header__inner">
+        <a
+          href="./index.html"
+          class="header__logo"
+          aria-label="Mueblería Hermanos Jota - Inicio"
+        >
+          <img
+            src="assets/logo.svg"
+            alt="Hermanos Jota"
+            class="header__logo-img"
+            width="120"
+            height="48"
+          />
+        </a>    <nav class="header__nav" aria-label="Navegación principal">
+      <ul class="header__nav-list">
+        <li>
+          <a href="./index.html" class="header__nav-link">Inicio</a>
+        </li>
+        <li>
+          <a href="./products.html" class="header__nav-link">Productos</a>
+        </li>
+        <li>
+          <a href="#sobre-nosotros" class="header__nav-link">
+            Sobre Nosotros
+          </a>
+        </li>
+        <li>
+          <a href="./contacto.html" class="header__nav-link">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="productos">
+    <div class="productos__inner">
+      <h1 class="productos__title">Nuestros productos</h1>
+
+      <div id="productos-grid" class="productos__grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer id="contacto" class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <p class="footer__name">Hermanos Jota</p>
+      <p class="footer__tagline">
+        Muebles de calidad, hechos con dedicación familiar desde hace 30
+        años.
+      </p>
+    </div>
+
+    <div class="footer__col">
+      <h2 class="footer__heading">Navegación</h2>
+      <ul class="footer__list">
+        <li>
+          <a href="./index.html" class="footer__link">Inicio</a>
+        </li>
+        <li>
+          <a href="./products.html" class="footer__link">Productos</a>
+        </li>
+        <li>
+          <a href="#sobre-nosotros" class="footer__link">
+            Sobre Nosotros
+          </a>
+        </li>
+        <li>
+          <a href="./contacto.html" class="footer__link">Contacto</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h2 class="footer__heading">Contacto</h2>
+
+      <address class="footer__address">
+        <p>
+          Av. San Juan 2847<br />
+          C1232AAB — Barrio de San Cristóbal<br />
+          Ciudad Autónoma de Buenos Aires<br />
+          Argentina
+        </p>
+
+        <p>
+          <a href="tel:+541112345678" class="footer__link">
+            +54 11 4567-8900
+          </a>
+        </p>
+
+        <p>
+          <a
+            href="mailto:ventas@hermanosjota.com.ar"
+            class="footer__link"
+          >
+            ventas@hermanosjota.com.ar
+          </a>
+        </p>
+
+        <p>
+          <a href="mailto:info@hermanosjota.com.ar" class="footer__link">
+            info@hermanosjota.com.ar
+          </a>
+        </p>
+
+        <p>
+          <a
+            href="https://www.instagram.com/hermanosjota_ba/"
+            class="footer__link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @hermanosjota_ba
+          </a>
+        </p>
+      </address>
+    </div>
+
+    <div class="footer__col">
+      <h2 class="footer__heading">Horarios</h2>
+
+      <ul class="footer__list">
+        <li>Lunes a viernes: 9:00 – 19:00</li>
+        <li>Sábados: 10:00 – 14:00</li>
+        <li>Domingos: cerrado</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <p class="footer__copy">
+      &copy; 2026 Mueblería Hermanos Jota. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>

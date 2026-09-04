@@ -40,7 +40,7 @@ function renderProductosDestacados() {
   grid.innerHTML = productosDestacados
     .map(
       (producto) => `
-        <a href="producto.html?id=${producto.id}" class="producto-card"">
+        <a href="producto.html?id=${producto.id}" class="producto-card">
           <img
             src="${producto.imagen}"
             alt="${producto.alt}"
