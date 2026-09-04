@@ -1,10 +1,16 @@
-const param = new URLSearchParams(window.location.search)
+async function getAllProducts() {
+    let result = await fetch("./assets/db.json").then(response => response.json())
+    return result
+}
 
-const productContainer = document.getElementById("product-container")
+async function getTopProducts(){
+    const result = await fetch("./assets/db.json").then(response => response.json())
+    return result.filter(product => product.isTop == true)
+}
 
-async function searchProduct(id){
+async function getProductById(id){
     let product;
-    const result = await fetch("db.json").then(response => response.json()).then((arr =>{
+    const result = await fetch("./assets/db.json").then(response => response.json()).then((arr =>{
         arr.forEach(element => {
             if(element.id == id){
                 product = element;
@@ -19,8 +25,10 @@ function capitalizeFirstLetter(str){
     return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
-async function renderProduct(event){
-    const product = await searchProduct(param.get("id"));
+async function renderSingleProduct(){
+    const param = new URLSearchParams(window.location.search)
+    const product = await getProductById(param.get("id"));
+    const productContainer = document.getElementById("product-container")
     const specificationsToArr = Object.entries(product.especificaciones).map(arr => arr.map(str => capitalizeFirstLetter(str)))
     
     productContainer.innerHTML = `
@@ -82,4 +90,45 @@ async function renderProduct(event){
     `
 }
 
-document.addEventListener("DOMContentLoaded",renderProduct)
+async function renderProducts(onlyTop = false){
+    const grid = document.getElementById("productos-grid");
+    const products = onlyTop? await getTopProducts() : await getAllProducts()
+
+    grid.innerHTML = products.map(
+      (producto) => `
+        <a href="product.html?id=${producto.id}" class="producto-card">
+          <img
+            src="${producto.imagen}"
+            alt="${producto.alt}"
+            class="producto-card__image"
+            loading="lazy"
+            width="400"
+            height="300"
+          />
+          <div class="producto-card__body">
+            <h3 class="producto-card__title">${producto.nombre}</h3>
+            <p class="producto-card__text">${producto.descripcion}</p>
+          </div>
+        </a>
+        `
+    )
+    .join("");
+}
+
+async function resolveRoute(){
+    switch (window.location.pathname) {
+        case "/muebleria-jota/products.html":
+            await renderProducts()
+            break;
+
+        case "/muebleria-jota/index.html":
+            await renderProducts(true)
+            break;
+        
+        case "/muebleria-jota/product.html":
+            await renderSingleProduct()
+            break;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", resolveRoute)

@@ -10,7 +10,8 @@
             "peso": "68 kg",
             "capacidad": "6 compartimentos interiores"
         },
-        "imagen": "assets/aparador uspallata.png"
+        "imagen": "assets/aparador uspallata.png",
+        "isTop": true
     },
     {
         "id": "biblioteca-recoleta",
@@ -23,7 +24,8 @@
             "capacidad": "45 kg por estante",
             "modulares": "5 estantes ajustables"
         },
-        "imagen": "assets/biblioteca recoleta.png"
+        "imagen": "assets/biblioteca recoleta.png",
+        "isTop": false
     },
     {
         "id": "butaca-mendoza",
@@ -36,7 +38,8 @@
             "tapizado": "repelente al agua y manchas",
             "confort": "espuma alta densidad"
         },
-        "imagen": "assets/butaca mendoza.png"
+        "imagen": "assets/butaca mendoza.png",
+        "isTop": false
     },
     {
         "id": "sillon-copacabana",
@@ -49,7 +52,8 @@
             "rotación": "360° silenciosa y suave",
             "garantía": "10 años en estructura"
         },
-        "imagen": "assets/sillón copacabana.png"
+        "imagen": "assets/sillón copacabana.png",
+        "isTop": false
     },
     {
         "id": "mesa-de-centro-araucaria",
@@ -62,7 +66,8 @@
             "peso": "42 kg",
             "carga máxima": "25 kg distribuidos"
         },
-        "imagen": "assets/mesa de centro araucaria.png"
+        "imagen": "assets/mesa de centro araucaria.png",
+        "isTop": true
     },
     {
         "id": "mesa-de-noche-aconcagua",
@@ -75,7 +80,8 @@
             "almacenamiento": "1 cajón + repisa inferior",
             "características": "cajón con cierre suave"
         },
-        "imagen": "assets/mesa de noche aconcagua.png"
+        "imagen": "assets/mesa de noche aconcagua.png",
+        "isTop": false
     },
     {
         "id": "sofa-patagonia",
@@ -88,7 +94,8 @@
             "relleno": "espuma hr + plumón reciclado",
             "sostenibilidad": "materiales 100% reciclables"
         },
-        "imagen": "assets/sofá patagonia.png"
+        "imagen": "assets/sofá patagonia.png",
+        "isTop": true
     },
     {
         "id": "mesa-comedor-pampa",
@@ -101,7 +108,8 @@
             "capacidad": "6-10 comensales",
             "extensión": "sistema de mariposa central"
         },
-        "imagen": "assets/mesa comedor pampa.png"
+        "imagen": "assets/mesa comedor pampa.png",
+        "isTop": false
     },
     {
         "id": "sillas-cordoba",
@@ -114,7 +122,8 @@
             "apilables": "hasta 6 sillas",
             "incluye": "set de 4 sillas"
         },
-        "imagen": "assets/sillas córdoba.png"
+        "imagen": "assets/sillas córdoba.png",
+        "isTop": false
     },
     {
         "id": "escritorio-costa",
@@ -127,7 +136,8 @@
             "almacenamiento": "1 cajón con organizador",
             "cables": "pasacables integrado"
         },
-        "imagen": "assets/escritorio costa.png"
+        "imagen": "assets/escritorio costa.png",
+        "isTop": false
     },
     {
         "id": "silla-trabajo-belgrano",
@@ -140,6 +150,7 @@
             "regulación": "altura + inclinación respaldo",
             "certificación": "ergonomía europea en 1335"
         },
-        "imagen": "assets/silla de trabajo belgrano.png"
+        "imagen": "assets/silla de trabajo belgrano.png",
+        "isTop": true
     }
 ]
