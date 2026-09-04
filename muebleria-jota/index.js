@@ -67,27 +67,28 @@ async function renderSingleProduct(){
             </table>
 
             <!-- Acciones de compra -->
-            <div class="producto-detalle__acciones">
+            <div class="producto-detalle__acciones" id="selector-cantidad">
             
-            <!-- Selector de cantidad -->
-            <div class="selector-cantidad">
-                <div class="selector-cantidad__controles">
-                <button type="button" class="btn-restar" aria-label="Disminuir cantidad">-</button>
-                <input type="number" id="cantidad-producto" value="1" min="1" class="input-cantidad">
-                <button type="button" class="btn-sumar" aria-label="Aumentar cantidad">+</button>
+                <!-- Selector de cantidad -->
+                <div class="selector-cantidad" >
+                    <div class="selector-cantidad__controles">
+                    <button type="button" class="btn-restar" id="btn-restar" aria-label="Disminuir cantidad">-</button>
+                    <input type="number" id="cantidad-producto" value="1" min="1" class="input-cantidad">
+                    <button type="button" class="btn-sumar" id="btn-sumar" aria-label="Aumentar cantidad">+</button>
+                    </div>
+                    <label for="cantidad-producto" class="selector-cantidad__label">Cantidad</label>
                 </div>
-                <label for="cantidad-producto" class="selector-cantidad__label">Cantidad</label>
-            </div>
 
-            <!-- Botón de carrito -->
-            <button type="button" class="btn-carrito">
-                Añadir al carrito
-            </button>
+                <!-- Botón de carrito -->
+                <button type="button" class="btn-carrito" id="agregarAlCarrito">
+                    Añadir al carrito
+                </button>
 
             </div>
         </div>
         </section>
     `
+    document.dispatchEvent(new Event('productoRenderizado'));
 }
 
 async function renderProducts(onlyTop = false){
