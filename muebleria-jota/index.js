@@ -66,7 +66,6 @@ async function renderSingleProduct() {
 
   productContainer.innerHTML = `
         <section class="producto-detalle">
-        <!-- Columna izquierda: Imagen -->
         <div class="producto-detalle__imagen-contenedor">
             <img 
             src="${product.imagen}"
@@ -75,7 +74,6 @@ async function renderSingleProduct() {
             >
         </div>
 
-        <!-- Columna derecha: Información -->
         <div class="producto-detalle__info">
             <h1 class="producto-detalle__titulo">${capitalizeFirstLetter(product.nombre)}</h1>
             
@@ -83,7 +81,6 @@ async function renderSingleProduct() {
             
             <p class="producto-detalle__precio">${formatPrice(product.precio)}</p>
 
-            <!-- Especificaciones -->
             <table class="producto-detalle__especificaciones">
             <tbody>
                 ${specificationsToArr
@@ -100,10 +97,9 @@ async function renderSingleProduct() {
             </tbody>
             </table>
 
-            <!-- Acciones de compra -->
+
             <div class="producto-detalle__acciones" id="selector-cantidad">
             
-                <!-- Selector de cantidad -->
                 <div class="selector-cantidad" >
                     <div class="selector-cantidad__controles">
                     <button type="button" class="btn-restar" id="btn-restar" aria-label="Disminuir cantidad">-</button>
@@ -113,7 +109,6 @@ async function renderSingleProduct() {
                     <label for="cantidad-producto" class="selector-cantidad__label">Cantidad</label>
                 </div>
 
-                <!-- Botón de carrito -->
                 <button type="button" class="btn-carrito" id="agregar-carrito">
                     Añadir al carrito
                 </button>

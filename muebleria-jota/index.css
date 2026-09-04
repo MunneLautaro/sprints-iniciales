@@ -74,7 +74,7 @@ body {
   list-style: none;
 }
 
-.header__cart{
+.header__cart {
   vertical-align: text-top;
   position: relative;
   display: flex;
@@ -82,10 +82,10 @@ body {
   justify-content: center;
 }
 
-.header__cart-number{
+.header__cart-number {
   position: absolute;
-  font-size: .7rem;
-  bottom: .3rem;
+  font-size: 0.7rem;
+  bottom: 0.3rem;
   font-weight: bold;
 }
 
@@ -396,12 +396,7 @@ body {
   }
 }
 
-/* ==========================================================================
-   VISTA DE DETALLE DE PRODUCTO
-   ========================================================================== */
-
 .producto-detalle {
-  /* Usamos un grid para dividir imagen e información */
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: calc(var(--spacing-base) * 4);
@@ -419,8 +414,6 @@ body {
   width: 100%;
   height: auto;
   object-fit: contain;
-  /* El fondo de la imagen ya parece coincidir con --color-bg, 
-     sino podés agregar mix-blend-mode: multiply; si es necesario */
 }
 
 .producto-detalle__info {
@@ -431,20 +424,20 @@ body {
 
 .producto-detalle__titulo {
   margin: 0;
-  font-family: var(--font-display); /* Playfair Display según manual */
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(2rem, 4vw, 2.75rem);
-  color: var(--color-primary); /* Siena Tostado */
+  color: var(--color-primary);
   line-height: 1.1;
 }
 
 .producto-detalle__descripcion {
   margin: 0;
-  font-family: var(--font-primary); /* Inter */
+  font-family: var(--font-primary);
   font-weight: 400;
-  font-size: 0.9375rem; /* 15px */
+  font-size: 0.9375rem;
   line-height: 1.6;
-  color: #2c2c2c; /* Gris oscuro para contrastar como en la imagen */
+  color: #2c2c2c;
 }
 
 .producto-detalle__precio {
@@ -452,10 +445,9 @@ body {
   font-family: var(--font-primary);
   font-weight: 700;
   font-size: 1.5rem;
-  color: #1a1a1a; /* Negro fuerte como en el diseño */
+  color: #1a1a1a;
 }
 
-/* Tabla de especificaciones */
 .producto-detalle__especificaciones {
   width: 100%;
   border-collapse: collapse;
@@ -465,7 +457,8 @@ body {
 .producto-detalle__especificaciones th,
 .producto-detalle__especificaciones td {
   padding: calc(var(--spacing-base) * 0.75) 0;
-  border-bottom: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--color-primary) 30%, transparent);
   text-align: left;
   font-size: 0.9375rem;
   font-family: var(--font-primary);
@@ -473,7 +466,7 @@ body {
 
 .producto-detalle__especificaciones th {
   font-weight: 600;
-  color: var(--color-primary); /* Siena Tostado */
+  color: var(--color-primary);
   width: 35%;
 }
 
@@ -482,7 +475,6 @@ body {
   color: #2c2c2c;
 }
 
-/* Área de acciones (Cantidad y Añadir al carrito) */
 .producto-detalle__acciones {
   display: flex;
   align-items: flex-start;
@@ -490,7 +482,6 @@ body {
   margin-top: var(--spacing-base);
 }
 
-/* Selector de Cantidad */
 .selector-cantidad {
   display: flex;
   flex-direction: column;
@@ -507,7 +498,7 @@ body {
   height: 3rem;
 }
 
-.btn-restar, 
+.btn-restar,
 .btn-sumar {
   background: transparent;
   border: none;
@@ -521,7 +512,7 @@ body {
   transition: background-color 0.2s ease;
 }
 
-.btn-restar:hover, 
+.btn-restar:hover,
 .btn-sumar:hover {
   background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
 }
@@ -531,17 +522,18 @@ body {
   height: 100%;
   text-align: center;
   border: none;
-  border-left: 1px solid color-mix(in srgb, var(--color-primary) 40%, transparent);
-  border-right: 1px solid color-mix(in srgb, var(--color-primary) 40%, transparent);
+  border-left: 1px solid
+    color-mix(in srgb, var(--color-primary) 40%, transparent);
+  border-right: 1px solid
+    color-mix(in srgb, var(--color-primary) 40%, transparent);
   background: transparent;
   font-family: var(--font-primary);
   font-weight: 600;
   font-size: 1rem;
   color: #1a1a1a;
-  -moz-appearance: textfield; /* Quita flechitas en Firefox */
+  -moz-appearance: textfield;
 }
 
-/* Quita las flechitas del input number en Chrome/Safari */
 .input-cantidad::-webkit-outer-spin-button,
 .input-cantidad::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -555,21 +547,22 @@ body {
   color: #2c2c2c;
 }
 
-/* Botón Añadir al carrito */
 .btn-carrito {
-  flex: 1; /* Para que ocupe el resto del espacio disponible */
+  flex: 1;
   height: 3rem;
-  background-color: var(--color-primary); /* Siena Tostado */
-  color: var(--color-bg); /* Alabastro Cálido */
+  background-color: var(--color-primary);
+  color: var(--color-bg);
   border: none;
   border-radius: var(--border-radius);
   font-family: var(--font-primary);
   font-weight: 500;
   font-size: 0.9375rem;
-  letter-spacing: 0.08em; /* Según manual para CTAs */
-  text-transform: uppercase; /* Según manual para CTAs */
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: opacity 0.2s ease, transform 0.1s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.1s ease;
   padding: 0 2rem;
 }
 
@@ -580,10 +573,6 @@ body {
 .btn-carrito:active {
   transform: scale(0.98);
 }
-
-/* ==========================================================================
-   MEDIA QUERIES (Responsive)
-   ========================================================================== */
 
 @media (max-width: 768px) {
   .producto-detalle {
@@ -603,7 +592,6 @@ body {
     align-self: center;
   }
 
-  /* Centramos el label de cantidad en mobile */
   .selector-cantidad {
     align-items: flex-start;
   }
