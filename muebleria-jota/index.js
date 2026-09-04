@@ -1,37 +1,70 @@
+async function loadProducts() {
+  const response = await fetch("./assets/db.json")
+
+  if (!response.ok) {
+    throw new Error(`No se pudieron cargar los productos (${response.status})`)
+  }
+
+  const products = await response.json()
+
+  if (!Array.isArray(products)) {
+    throw new Error("El catálogo de productos tiene un formato inválido")
+  }
+
+  return products
+}
+
 async function getAllProducts() {
-    let result = await fetch("./assets/db.json").then(response => response.json())
-    return result
+  return loadProducts()
 }
 
-async function getTopProducts(){
-    const result = await fetch("./assets/db.json").then(response => response.json())
-    return result.filter(product => product.isTop == true)
+async function getTopProducts() {
+  const products = await loadProducts()
+  return products.filter((product) => product.isTop === true)
 }
 
-async function getProductById(id){
-    let product;
-    const result = await fetch("./assets/db.json").then(response => response.json()).then((arr =>{
-        arr.forEach(element => {
-            if(element.id == id){
-                product = element;
-            }
-        });
-    }))
-
-    return product;
+async function getProductById(id) {
+  const products = await loadProducts()
+  return products.find((product) => product.id === id)
 }
 
-function capitalizeFirstLetter(str){
-    return str.charAt(0).toUpperCase() + str.slice(1)
+function capitalizeFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
-async function renderSingleProduct(){
-    const param = new URLSearchParams(window.location.search)
-    const product = await getProductById(param.get("id"));
-    const productContainer = document.getElementById("product-container")
-    const specificationsToArr = Object.entries(product.especificaciones).map(arr => arr.map(str => capitalizeFirstLetter(str)))
-    
+function formatPrice(price) {
+  return new Intl.NumberFormat("es-AR", {
+    style: "currency",
+    currency: "ARS",
+    maximumFractionDigits: 0,
+  }).format(price)
+}
+
+async function renderSingleProduct() {
+  const param = new URLSearchParams(window.location.search)
+  const product = await getProductById(param.get("id"))
+  const productContainer = document.getElementById("product-container")
+
+  if (!product) {
     productContainer.innerHTML = `
+            <section class="producto-detalle">
+                <div class="producto-detalle__info">
+                    <h1 class="producto-detalle__titulo">Producto no encontrado</h1>
+                    <p class="producto-detalle__descripcion">
+                        El producto que buscas no existe o ya no está disponible.
+                    </p>
+                    <a href="products.html" class="btn-carrito">Ver productos</a>
+                </div>
+            </section>
+        `
+    return
+  }
+
+  const specificationsToArr = Object.entries(product.especificaciones).map(
+    (arr) => arr.map((str) => capitalizeFirstLetter(str)),
+  )
+
+  productContainer.innerHTML = `
         <section class="producto-detalle">
         <!-- Columna izquierda: Imagen -->
         <div class="producto-detalle__imagen-contenedor">
@@ -48,21 +81,22 @@ async function renderSingleProduct(){
             
             <p class="producto-detalle__descripcion">${capitalizeFirstLetter(product.descripcion)}</p>
             
-            <p class="producto-detalle__precio">$1200000</p>
+            <p class="producto-detalle__precio">${formatPrice(product.precio)}</p>
 
             <!-- Especificaciones -->
             <table class="producto-detalle__especificaciones">
             <tbody>
-                ${
-                    specificationsToArr.map(spec =>
-                        `
+                ${specificationsToArr
+                  .map(
+                    (spec) =>
+                      `
                             <tr>
                                 <th>${spec[0].charAt(0).toUpperCase() + spec[0].slice(1)}</th>
                                 <td>${spec[1]}</td>
                             </tr>
-                        `
-                    ).join("")
-                }
+                        `,
+                  )
+                  .join("")}
             </tbody>
             </table>
 
@@ -87,14 +121,15 @@ async function renderSingleProduct(){
         </div>
         </section>
     `
-    document.dispatchEvent(new Event('productoRenderizado'));
+  document.dispatchEvent(new Event("productoRenderizado"))
 }
 
-async function renderProducts(onlyTop = false){
-    const grid = document.getElementById("productos-grid");
-    const products = onlyTop? await getTopProducts() : await getAllProducts()
+async function renderProducts(onlyTop = false) {
+  const grid = document.getElementById("productos-grid")
+  const products = onlyTop ? await getTopProducts() : await getAllProducts()
 
-    grid.innerHTML = products.map(
+  grid.innerHTML = products
+    .map(
       (producto) => `
         <a href="product.html?id=${producto.id}" class="producto-card">
           <img
@@ -110,25 +145,48 @@ async function renderProducts(onlyTop = false){
             <p class="producto-card__text">${capitalizeFirstLetter(producto.descripcion)}</p>
           </div>
         </a>
-        `
+        `,
     )
-    .join("");
+    .join("")
 }
 
-async function resolveRoute(){
-    switch (window.location.pathname) {
-        case "/muebleria-jota/products.html":
-            await renderProducts()
-            break;
+function renderLoadError(container) {
+  container.innerHTML = `
+        <p role="alert">
+            No pudimos cargar el catálogo. Revisá tu conexión e intentá nuevamente.
+        </p>
+    `
+}
 
-        case "/muebleria-jota/index.html":
-            await renderProducts(true)
-            break;
-        
-        case "/muebleria-jota/product.html":
-            await renderSingleProduct()
-            break;
+async function resolveRoute() {
+  try {
+    const currentPage =
+      window.location.pathname.split("/").pop() || "index.html"
+
+    switch (currentPage) {
+      case "products.html":
+        await renderProducts()
+        break
+
+      case "index.html":
+        await renderProducts(true)
+        break
+
+      case "product.html":
+        await renderSingleProduct()
+        break
     }
+  } catch (error) {
+    const container =
+      document.getElementById("productos-grid") ||
+      document.getElementById("product-container")
+
+    if (container) {
+      renderLoadError(container)
+    }
+
+    console.error("Error al cargar la aplicación:", error)
+  }
 }
 
 document.addEventListener("DOMContentLoaded", resolveRoute)

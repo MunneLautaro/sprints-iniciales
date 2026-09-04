@@ -1,156 +1,167 @@
 [
-    {
-        "id": "aparador-uspallata",
-        "nombre": "aparador uspallata",
-        "descripcion": "aparador de seis puertas fabricado en nogal sostenible con tiradores metálicos en acabado latón. su silueta minimalista realza el veteado natural de la madera, creando una pieza que combina funcionalidad y elegancia atemporal para espacios contemporáneos.",
-        "especificaciones": {
-            "medidas": "200 × 45 × 75 cm",
-            "materiales": "nogal macizo fsc®, herrajes de latón",
-            "acabado": "aceite natural ecológico",
-            "peso": "68 kg",
-            "capacidad": "6 compartimentos interiores"
-        },
-        "imagen": "assets/aparador uspallata.png",
-        "isTop": true
+  {
+    "id": "aparador-uspallata",
+    "precio": 1850000,
+    "nombre": "aparador uspallata",
+    "descripcion": "aparador de seis puertas fabricado en nogal sostenible con tiradores metálicos en acabado latón. su silueta minimalista realza el veteado natural de la madera, creando una pieza que combina funcionalidad y elegancia atemporal para espacios contemporáneos.",
+    "especificaciones": {
+      "medidas": "200 × 45 × 75 cm",
+      "materiales": "nogal macizo fsc®, herrajes de latón",
+      "acabado": "aceite natural ecológico",
+      "peso": "68 kg",
+      "capacidad": "6 compartimentos interiores"
     },
-    {
-        "id": "biblioteca-recoleta",
-        "nombre": "biblioteca recoleta",
-        "descripcion": "sistema modular de estantes abierto que combina estructura de acero sage green y repisas en roble claro. perfecta para colecciones y objetos de diseño, su diseño versátil se adapta a cualquier espacio contemporáneo con elegancia funcional.",
-        "especificaciones": {
-            "medidas": "100 × 35 × 200 cm",
-            "materiales": "estructura de acero, estantes de roble",
-            "acabado": "laca mate ecológica",
-            "capacidad": "45 kg por estante",
-            "modulares": "5 estantes ajustables"
-        },
-        "imagen": "assets/biblioteca recoleta.png",
-        "isTop": false
+    "imagen": "assets/aparador uspallata.png",
+    "isTop": true
+  },
+  {
+    "id": "biblioteca-recoleta",
+    "precio": 1420000,
+    "nombre": "biblioteca recoleta",
+    "descripcion": "sistema modular de estantes abierto que combina estructura de acero sage green y repisas en roble claro. perfecta para colecciones y objetos de diseño, su diseño versátil se adapta a cualquier espacio contemporáneo con elegancia funcional.",
+    "especificaciones": {
+      "medidas": "100 × 35 × 200 cm",
+      "materiales": "estructura de acero, estantes de roble",
+      "acabado": "laca mate ecológica",
+      "capacidad": "45 kg por estante",
+      "modulares": "5 estantes ajustables"
     },
-    {
-        "id": "butaca-mendoza",
-        "nombre": "butaca mendoza",
-        "descripcion": "butaca tapizada en bouclé dusty rose con base de madera de guatambú. el respaldo curvo abraza el cuerpo y ofrece máximo confort, mientras que su diseño orgánico aporta calidez y sofisticación a cualquier ambiente contemporáneo.",
-        "especificaciones": {
-            "medidas": "80 × 75 × 85 cm",
-            "materiales": "guatambú macizo, tela bouclé",
-            "acabado": "cera vegetal, tapizado premium",
-            "tapizado": "repelente al agua y manchas",
-            "confort": "espuma alta densidad"
-        },
-        "imagen": "assets/butaca mendoza.png",
-        "isTop": false
+    "imagen": "assets/biblioteca recoleta.png",
+    "isTop": false
+  },
+  {
+    "id": "butaca-mendoza",
+    "precio": 980000,
+    "nombre": "butaca mendoza",
+    "descripcion": "butaca tapizada en bouclé dusty rose con base de madera de guatambú. el respaldo curvo abraza el cuerpo y ofrece máximo confort, mientras que su diseño orgánico aporta calidez y sofisticación a cualquier ambiente contemporáneo.",
+    "especificaciones": {
+      "medidas": "80 × 75 × 85 cm",
+      "materiales": "guatambú macizo, tela bouclé",
+      "acabado": "cera vegetal, tapizado premium",
+      "tapizado": "repelente al agua y manchas",
+      "confort": "espuma alta densidad"
     },
-    {
-        "id": "sillon-copacabana",
-        "nombre": "sillón copacabana",
-        "descripcion": "sillón lounge en cuero cognac con base giratoria en acero burnt sienna. inspirado en la estética brasilera moderna de los 60, combina comodidad excepcional con un diseño icónico que trasciende tendencias y épocas.",
-        "especificaciones": {
-            "medidas": "90 × 85 × 95 cm",
-            "materiales": "cuero curtido vegetal, acero pintado",
-            "acabado": "cuero anilina premium",
-            "rotación": "360° silenciosa y suave",
-            "garantía": "10 años en estructura"
-        },
-        "imagen": "assets/sillón copacabana.png",
-        "isTop": false
+    "imagen": "assets/butaca mendoza.png",
+    "isTop": false
+  },
+  {
+    "id": "sillon-copacabana",
+    "precio": 1250000,
+    "nombre": "sillón copacabana",
+    "descripcion": "sillón lounge en cuero cognac con base giratoria en acero burnt sienna. inspirado en la estética brasilera moderna de los 60, combina comodidad excepcional con un diseño icónico que trasciende tendencias y épocas.",
+    "especificaciones": {
+      "medidas": "90 × 85 × 95 cm",
+      "materiales": "cuero curtido vegetal, acero pintado",
+      "acabado": "cuero anilina premium",
+      "rotación": "360° silenciosa y suave",
+      "garantía": "10 años en estructura"
     },
-    {
-        "id": "mesa-de-centro-araucaria",
-        "nombre": "mesa de centro araucaria",
-        "descripcion": "mesa de centro con sobre circular de mármol patagonia y base de tres patas en madera de nogal. su diseño minimalista se convierte en el punto focal perfecto para cualquier sala de estar contemporánea, combinando la frialdad del mármol con la calidez de la madera.",
-        "especificaciones": {
-            "medidas": "80 × 80 × 45 cm",
-            "materiales": "sobre de mármol patagonia, patas de nogal",
-            "acabado": "mármol pulido, aceite natural en madera",
-            "peso": "42 kg",
-            "carga máxima": "25 kg distribuidos"
-        },
-        "imagen": "assets/mesa de centro araucaria.png",
-        "isTop": true
+    "imagen": "assets/sillón copacabana.png",
+    "isTop": false
+  },
+  {
+    "id": "mesa-de-centro-araucaria",
+    "precio": 890000,
+    "nombre": "mesa de centro araucaria",
+    "descripcion": "mesa de centro con sobre circular de mármol patagonia y base de tres patas en madera de nogal. su diseño minimalista se convierte en el punto focal perfecto para cualquier sala de estar contemporánea, combinando la frialdad del mármol con la calidez de la madera.",
+    "especificaciones": {
+      "medidas": "80 × 80 × 45 cm",
+      "materiales": "sobre de mármol patagonia, patas de nogal",
+      "acabado": "mármol pulido, aceite natural en madera",
+      "peso": "42 kg",
+      "carga máxima": "25 kg distribuidos"
     },
-    {
-        "id": "mesa-de-noche-aconcagua",
-        "nombre": "mesa de noche aconcagua",
-        "descripcion": "mesa de noche con cajón oculto y repisa inferior en roble certificado fsc®. su diseño limpio y funcional permite convivir con diferentes estilos de dormitorio, ofreciendo almacenamiento discreto y elegante para objetos personales.",
-        "especificaciones": {
-            "medidas": "45 × 35 × 60 cm",
-            "materiales": "roble macizo fsc®, herrajes soft-close",
-            "acabado": "barniz mate de poliuretano",
-            "almacenamiento": "1 cajón + repisa inferior",
-            "características": "cajón con cierre suave"
-        },
-        "imagen": "assets/mesa de noche aconcagua.png",
-        "isTop": false
+    "imagen": "assets/mesa de centro araucaria.png",
+    "isTop": true
+  },
+  {
+    "id": "mesa-de-noche-aconcagua",
+    "precio": 460000,
+    "nombre": "mesa de noche aconcagua",
+    "descripcion": "mesa de noche con cajón oculto y repisa inferior en roble certificado fsc®. su diseño limpio y funcional permite convivir con diferentes estilos de dormitorio, ofreciendo almacenamiento discreto y elegante para objetos personales.",
+    "especificaciones": {
+      "medidas": "45 × 35 × 60 cm",
+      "materiales": "roble macizo fsc®, herrajes soft-close",
+      "acabado": "barniz mate de poliuretano",
+      "almacenamiento": "1 cajón + repisa inferior",
+      "características": "cajón con cierre suave"
     },
-    {
-        "id": "sofa-patagonia",
-        "nombre": "sofá patagonia",
-        "descripcion": "sofá de tres cuerpos tapizado en lino warm alabaster con patas cónicas de madera. los cojines combinan espuma de alta resiliencia con plumón reciclado, ofreciendo comodidad duradera y sostenible para el hogar moderno.",
-        "especificaciones": {
-            "medidas": "220 × 90 × 80 cm",
-            "estructura": "madera de eucalipto certificada fsc®",
-            "tapizado": "lino 100% natural premium",
-            "relleno": "espuma hr + plumón reciclado",
-            "sostenibilidad": "materiales 100% reciclables"
-        },
-        "imagen": "assets/sofá patagonia.png",
-        "isTop": true
+    "imagen": "assets/mesa de noche aconcagua.png",
+    "isTop": false
+  },
+  {
+    "id": "sofa-patagonia",
+    "precio": 2150000,
+    "nombre": "sofá patagonia",
+    "descripcion": "sofá de tres cuerpos tapizado en lino warm alabaster con patas cónicas de madera. los cojines combinan espuma de alta resiliencia con plumón reciclado, ofreciendo comodidad duradera y sostenible para el hogar moderno.",
+    "especificaciones": {
+      "medidas": "220 × 90 × 80 cm",
+      "estructura": "madera de eucalipto certificada fsc®",
+      "tapizado": "lino 100% natural premium",
+      "relleno": "espuma hr + plumón reciclado",
+      "sostenibilidad": "materiales 100% reciclables"
     },
-    {
-        "id": "mesa-comedor-pampa",
-        "nombre": "mesa comedor pampa",
-        "descripcion": "mesa extensible de roble macizo con tablero biselado y sistema de apertura suave. su diseño robusto y elegante se adapta perfectamente a reuniones íntimas o grandes celebraciones familiares, extendiéndose de 6 a 10 comensales.",
-        "especificaciones": {
-            "medidas": "160-240 × 90 × 75 cm",
-            "materiales": "roble macizo fsc®, mecanismo alemán",
-            "acabado": "aceite-cera natural",
-            "capacidad": "6-10 comensales",
-            "extensión": "sistema de mariposa central"
-        },
-        "imagen": "assets/mesa comedor pampa.png",
-        "isTop": false
+    "imagen": "assets/sofá patagonia.png",
+    "isTop": true
+  },
+  {
+    "id": "mesa-comedor-pampa",
+    "precio": 1780000,
+    "nombre": "mesa comedor pampa",
+    "descripcion": "mesa extensible de roble macizo con tablero biselado y sistema de apertura suave. su diseño robusto y elegante se adapta perfectamente a reuniones íntimas o grandes celebraciones familiares, extendiéndose de 6 a 10 comensales.",
+    "especificaciones": {
+      "medidas": "160-240 × 90 × 75 cm",
+      "materiales": "roble macizo fsc®, mecanismo alemán",
+      "acabado": "aceite-cera natural",
+      "capacidad": "6-10 comensales",
+      "extensión": "sistema de mariposa central"
     },
-    {
-        "id": "sillas-cordoba",
-        "nombre": "sillas córdoba",
-        "descripcion": "set de cuatro sillas apilables en contrachapado moldeado de nogal y estructura tubular pintada en sage green. su diseño ergonómico y materiales de calidad garantizan comodidad y durabilidad en el uso diario, perfectas para comedores contemporáneos.",
-        "especificaciones": {
-            "medidas": "45 × 52 × 80 cm (cada una)",
-            "materiales": "contrachapado nogal, tubo de acero",
-            "acabado": "laca mate, pintura epoxi",
-            "apilables": "hasta 6 sillas",
-            "incluye": "set de 4 sillas"
-        },
-        "imagen": "assets/sillas córdoba.png",
-        "isTop": false
+    "imagen": "assets/mesa comedor pampa.png",
+    "isTop": false
+  },
+  {
+    "id": "sillas-cordoba",
+    "precio": 720000,
+    "nombre": "sillas córdoba",
+    "descripcion": "set de cuatro sillas apilables en contrachapado moldeado de nogal y estructura tubular pintada en sage green. su diseño ergonómico y materiales de calidad garantizan comodidad y durabilidad en el uso diario, perfectas para comedores contemporáneos.",
+    "especificaciones": {
+      "medidas": "45 × 52 × 80 cm (cada una)",
+      "materiales": "contrachapado nogal, tubo de acero",
+      "acabado": "laca mate, pintura epoxi",
+      "apilables": "hasta 6 sillas",
+      "incluye": "set de 4 sillas"
     },
-    {
-        "id": "escritorio-costa",
-        "nombre": "escritorio costa",
-        "descripcion": "escritorio compacto con cajón organizado y tapa pasacables integrada en bambú laminado. ideal para espacios de trabajo en casa, combina funcionalidad moderna con estética minimalista y sostenible, perfecto para el trabajo remoto.",
-        "especificaciones": {
-            "medidas": "120 × 60 × 75 cm",
-            "materiales": "bambú laminado, herrajes ocultos",
-            "acabado": "laca mate resistente",
-            "almacenamiento": "1 cajón con organizador",
-            "cables": "pasacables integrado"
-        },
-        "imagen": "assets/escritorio costa.png",
-        "isTop": false
+    "imagen": "assets/sillas córdoba.png",
+    "isTop": false
+  },
+  {
+    "id": "escritorio-costa",
+    "precio": 940000,
+    "nombre": "escritorio costa",
+    "descripcion": "escritorio compacto con cajón organizado y tapa pasacables integrada en bambú laminado. ideal para espacios de trabajo en casa, combina funcionalidad moderna con estética minimalista y sostenible, perfecto para el trabajo remoto.",
+    "especificaciones": {
+      "medidas": "120 × 60 × 75 cm",
+      "materiales": "bambú laminado, herrajes ocultos",
+      "acabado": "laca mate resistente",
+      "almacenamiento": "1 cajón con organizador",
+      "cables": "pasacables integrado"
     },
-    {
-        "id": "silla-trabajo-belgrano",
-        "nombre": "silla de trabajo belgrano",
-        "descripcion": "silla ergonómica regulable en altura con respaldo de malla transpirable y asiento tapizado en tejido reciclado. diseñada para largas jornadas de trabajo con máximo confort y apoyo lumbar, ideal para oficinas en casa y espacios de coworking.",
-        "especificaciones": {
-            "medidas": "60 × 60 × 90-100 cm",
-            "materiales": "malla técnica, tejido reciclado",
-            "acabado": "base cromada, tapizado premium",
-            "regulación": "altura + inclinación respaldo",
-            "certificación": "ergonomía europea en 1335"
-        },
-        "imagen": "assets/silla de trabajo belgrano.png",
-        "isTop": true
-    }
+    "imagen": "assets/escritorio costa.png",
+    "isTop": false
+  },
+  {
+    "id": "silla-trabajo-belgrano",
+    "precio": 680000,
+    "nombre": "silla de trabajo belgrano",
+    "descripcion": "silla ergonómica regulable en altura con respaldo de malla transpirable y asiento tapizado en tejido reciclado. diseñada para largas jornadas de trabajo con máximo confort y apoyo lumbar, ideal para oficinas en casa y espacios de coworking.",
+    "especificaciones": {
+      "medidas": "60 × 60 × 90-100 cm",
+      "materiales": "malla técnica, tejido reciclado",
+      "acabado": "base cromada, tapizado premium",
+      "regulación": "altura + inclinación respaldo",
+      "certificación": "ergonomía europea en 1335"
+    },
+    "imagen": "assets/silla de trabajo belgrano.png",
+    "isTop": true
+  }
 ]
