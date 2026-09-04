@@ -119,9 +119,17 @@ async function renderSingleProduct() {
   document.dispatchEvent(new Event("productoRenderizado"))
 }
 
-async function renderProducts(onlyTop = false) {
+function renderProductGrid(products) {
   const grid = document.getElementById("productos-grid")
-  const products = onlyTop ? await getTopProducts() : await getAllProducts()
+
+  if (products.length === 0) {
+    grid.innerHTML = `
+      <p class="productos__empty" role="status">
+        No encontramos productos con esa búsqueda.
+      </p>
+    `
+    return
+  }
 
   grid.innerHTML = products
     .map(
@@ -145,6 +153,31 @@ async function renderProducts(onlyTop = false) {
     .join("")
 }
 
+async function renderProducts(onlyTop = false) {
+  const products = onlyTop ? await getTopProducts() : await getAllProducts()
+  renderProductGrid(products)
+  return products
+}
+
+function setupProductSearch(products) {
+  const searchInput = document.getElementById("busqueda-productos")
+
+  if (!searchInput) {
+    return
+  }
+
+  searchInput.addEventListener("input", () => {
+    const searchTerm = searchInput.value.trim().toLocaleLowerCase()
+    const filteredProducts = products.filter((product) => {
+      const searchableText =
+        `${product.nombre} ${product.descripcion}`.toLocaleLowerCase()
+      return searchableText.includes(searchTerm)
+    })
+
+    renderProductGrid(filteredProducts)
+  })
+}
+
 function renderLoadError(container) {
   container.innerHTML = `
         <p role="alert">
@@ -160,7 +193,7 @@ async function resolveRoute() {
 
     switch (currentPage) {
       case "products.html":
-        await renderProducts()
+        setupProductSearch(await renderProducts())
         break
 
       case "index.html":
