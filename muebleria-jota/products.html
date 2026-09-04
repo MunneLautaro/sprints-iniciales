@@ -6,16 +6,18 @@
     <title>Productos | Mueblería Hermanos Jota</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="stylesheet" href="index.css" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap"
-  rel="stylesheet"
-/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon">
 
-<script type="module" src="index.js"></script>
-
-  </head>  <body>
+    <script type="module" src="index.js"></script>
+    <script type="module" src="cart.js"></script>
+  </head>
+  <body>
     <header class="header">
       <div class="header__inner">
         <a
@@ -48,6 +50,12 @@
         </li>
       </ul>
     </nav>
+    <div class="header__cart">
+            <p class="header__cart-number" id="cart-number"></p>
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+            </svg>
+        </div>
   </div>
 </header>
 
@@ -147,12 +155,12 @@
     </div>
   </div>
 
-  <div class="footer__bottom">
-    <p class="footer__copy">
-      &copy; 2026 Mueblería Hermanos Jota. Todos los derechos reservados.
-    </p>
-  </div>
-</footer>
+    <div class="footer__bottom">
+      <p class="footer__copy">
+        &copy; 2026 Mueblería Hermanos Jota. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
 
   </body>
 </html>

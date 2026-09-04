@@ -80,10 +80,9 @@ async function renderSingleProduct(){
                 </div>
 
                 <!-- Botón de carrito -->
-                <button type="button" class="btn-carrito" id="agregarAlCarrito">
+                <button type="button" class="btn-carrito" id="agregar-carrito">
                     Añadir al carrito
                 </button>
-
             </div>
         </div>
         </section>
@@ -107,8 +106,8 @@ async function renderProducts(onlyTop = false){
             height="300"
           />
           <div class="producto-card__body">
-            <h3 class="producto-card__title">${producto.nombre}</h3>
-            <p class="producto-card__text">${producto.descripcion}</p>
+            <h3 class="producto-card__title">${capitalizeFirstLetter(producto.nombre)}</h3>
+            <p class="producto-card__text">${capitalizeFirstLetter(producto.descripcion)}</p>
           </div>
         </a>
         `

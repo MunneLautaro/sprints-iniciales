@@ -41,7 +41,7 @@ body {
 .header__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: calc(var(--spacing-base) * 2);
   max-width: 72rem;
   margin: 0 auto;
@@ -72,6 +72,21 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.header__cart{
+  vertical-align: text-top;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__cart-number{
+  position: absolute;
+  font-size: .7rem;
+  bottom: .3rem;
+  font-weight: bold;
 }
 
 .header__nav-link {
