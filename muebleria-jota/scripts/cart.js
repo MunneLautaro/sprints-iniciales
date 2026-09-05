@@ -3,6 +3,26 @@ function handleCartChange() {
   cartNumber.innerText = localStorage.getItem("cart") ?? ""
 }
 
+function showCartNotification(quantity) {
+  let notification = document.getElementById("cart-notification")
+
+  if (!notification) {
+    notification = document.createElement("p")
+    notification.id = "cart-notification"
+    notification.className = "cart-notification"
+    notification.setAttribute("role", "status")
+    notification.setAttribute("aria-live", "polite")
+    document.body.append(notification)
+  }
+
+  notification.textContent = `${quantity} ${quantity === 1 ? "producto agregado" : "productos agregados"} al carrito.`
+  notification.classList.add("cart-notification--visible")
+
+  window.setTimeout(() => {
+    notification.classList.remove("cart-notification--visible")
+  }, 2500)
+}
+
 document.addEventListener("DOMContentLoaded", handleCartChange)
 
 if (window.location.pathname.split("/").pop() === "product.html") {
@@ -35,6 +55,7 @@ if (window.location.pathname.split("/").pop() === "product.html") {
 
           cartNumber.innerText = currentCart + quantity
           localStorage.setItem("cart", cartNumber.innerText)
+          showCartNotification(quantity)
       }
     }
 
