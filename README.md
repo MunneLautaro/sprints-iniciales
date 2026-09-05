@@ -28,6 +28,17 @@ El catálogo se carga desde un archivo JSON local y la cantidad del carrito se p
 
 Como la aplicación carga datos mediante `fetch`, debe ejecutarse usando un servidor local.
 
+La aplicación está organizada por responsabilidades dentro de `muebleria-jota`:
+
+```text
+muebleria-jota/
+├── pages/      # Páginas HTML
+├── styles/     # Hojas de estilos
+├── scripts/    # Lógica JavaScript
+├── data/       # Catálogo en JSON
+└── assets/     # Imágenes y logo
+```
+
 Desde la carpeta que contiene el proyecto:
 
 ```powershell
@@ -37,5 +48,5 @@ py -m http.server 5500
 Luego abrir en el navegador:
 
 ```text
-http://localhost:5500/muebleria-jota/index.html
+http://localhost:5500/muebleria-jota/pages/index.html
 ```

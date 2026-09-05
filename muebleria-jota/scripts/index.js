@@ -1,5 +1,5 @@
 async function loadProducts() {
-  const response = await fetch("./assets/db.json")
+  const response = await fetch("../data/db.json")
 
   if (!response.ok) {
     throw new Error(`No se pudieron cargar los productos (${response.status})`)
