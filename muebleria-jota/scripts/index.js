@@ -1,5 +1,5 @@
 async function loadProducts() {
-  const response = await fetch("../data/db.json")
+  const response = await fetch(new URL("../data/db.json", import.meta.url))
 
   if (!response.ok) {
     throw new Error(`No se pudieron cargar los productos (${response.status})`)
@@ -40,6 +40,10 @@ function formatPrice(price) {
   }).format(price)
 }
 
+function resolveProductImage(imagePath) {
+  return new URL(imagePath, import.meta.url).href
+}
+
 async function renderSingleProduct() {
   const param = new URLSearchParams(window.location.search)
   const product = await getProductById(param.get("id"))
@@ -68,7 +72,7 @@ async function renderSingleProduct() {
         <section class="producto-detalle">
         <div class="producto-detalle__imagen-contenedor">
             <img 
-            src="${product.imagen}"
+            src="${resolveProductImage(product.imagen)}"
             alt=${product.nombre} 
             class="producto-detalle__imagen"
             >
@@ -136,7 +140,7 @@ function renderProductGrid(products) {
       (producto) => `
         <a href="product.html?id=${producto.id}" class="producto-card">
           <img
-            src="${producto.imagen}"
+            src="${resolveProductImage(producto.imagen)}"
             alt="${producto.alt}"
             class="producto-card__image"
             loading="lazy"
