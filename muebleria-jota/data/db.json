@@ -11,7 +11,7 @@
       "peso": "68 kg",
       "capacidad": "6 compartimentos interiores"
     },
-    "imagen": "../assets/aparador uspallata.png",
+    "imagen": "../assets/Aparador Uspallata.png",
     "isTop": true
   },
   {
@@ -26,7 +26,7 @@
       "capacidad": "45 kg por estante",
       "modulares": "5 estantes ajustables"
     },
-    "imagen": "../assets/biblioteca recoleta.png",
+    "imagen": "../assets/Biblioteca Recoleta.png",
     "isTop": false
   },
   {
@@ -41,7 +41,7 @@
       "tapizado": "repelente al agua y manchas",
       "confort": "espuma alta densidad"
     },
-    "imagen": "../assets/butaca mendoza.png",
+    "imagen": "../assets/Butaca Mendoza.png",
     "isTop": false
   },
   {
@@ -56,7 +56,7 @@
       "rotación": "360° silenciosa y suave",
       "garantía": "10 años en estructura"
     },
-    "imagen": "../assets/sillón copacabana.png",
+    "imagen": "../assets/Sillón Copacabana.png",
     "isTop": false
   },
   {
@@ -71,7 +71,7 @@
       "peso": "42 kg",
       "carga máxima": "25 kg distribuidos"
     },
-    "imagen": "../assets/mesa de centro araucaria.png",
+    "imagen": "../assets/Mesa de Centro Araucaria.png",
     "isTop": true
   },
   {
@@ -86,7 +86,7 @@
       "almacenamiento": "1 cajón + repisa inferior",
       "características": "cajón con cierre suave"
     },
-    "imagen": "../assets/mesa de noche aconcagua.png",
+    "imagen": "../assets/Mesa de Noche Aconcagua.png",
     "isTop": false
   },
   {
@@ -101,7 +101,7 @@
       "relleno": "espuma hr + plumón reciclado",
       "sostenibilidad": "materiales 100% reciclables"
     },
-    "imagen": "../assets/sofá patagonia.png",
+    "imagen": "../assets/Sofá Patagonia.png",
     "isTop": true
   },
   {
@@ -116,7 +116,7 @@
       "capacidad": "6-10 comensales",
       "extensión": "sistema de mariposa central"
     },
-    "imagen": "../assets/mesa comedor pampa.png",
+    "imagen": "../assets/Mesa Comedor Pampa.png",
     "isTop": false
   },
   {
@@ -131,7 +131,7 @@
       "apilables": "hasta 6 sillas",
       "incluye": "set de 4 sillas"
     },
-    "imagen": "../assets/sillas córdoba.png",
+    "imagen": "../assets/Sillas Córdoba.png",
     "isTop": false
   },
   {
@@ -146,7 +146,7 @@
       "almacenamiento": "1 cajón con organizador",
       "cables": "pasacables integrado"
     },
-    "imagen": "../assets/escritorio costa.png",
+    "imagen": "../assets/Escritorio Costa.png",
     "isTop": false
   },
   {
@@ -161,7 +161,7 @@
       "regulación": "altura + inclinación respaldo",
       "certificación": "ergonomía europea en 1335"
     },
-    "imagen": "../assets/silla de trabajo belgrano.png",
+    "imagen": "../assets/Silla de Trabajo Belgrano.png",
     "isTop": true
   }
 ]
