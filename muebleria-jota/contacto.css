@@ -1,0 +1,103 @@
+.contacto {
+  padding: calc(var(--spacing-base) * 4) calc(var(--spacing-base) * 2);
+}
+
+.contacto__inner {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.contacto__title {
+  margin: 0 0 var(--spacing-base);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.contacto__intro {
+  margin: 0 0 calc(var(--spacing-base) * 2);
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contacto__form {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-base) * 1.25);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-base) * 0.35);
+}
+
+.form-field label {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.form-field input,
+.form-field textarea {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1rem;
+}
+
+.form-field textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+.form-field__error {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-weight: 300;
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  color: var(--color-accent-soft);
+}
+
+.form-field--invalid input,
+.form-field--invalid textarea {
+  border-color: var(--color-accent-soft);
+}
+
+.contacto__submit {
+  align-self: flex-start;
+}
+
+.contacto__exito {
+  margin: var(--spacing-base) 0 0;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-secondary);
+}
+
+@media (max-width: 640px) {
+  .contacto {
+    padding: calc(var(--spacing-base) * 3) var(--spacing-base);
+  }
+}
