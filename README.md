@@ -14,7 +14,8 @@ Sitio web de e-commerce para la mueblería Hermanos Jota. Permite explorar el ca
 
 El catálogo se carga desde un archivo JSON local y la cantidad del carrito se persiste en el navegador mediante `localStorage`.
 
-## Instalación Clonar el repositorio: 
+## Instalación Clonar el repositorio:
+
 ```bash
 git clone https://github.com/MunneLautaro/sprints-iniciales.git
 ```
@@ -37,6 +38,7 @@ La aplicación está organizada por responsabilidades dentro de `muebleria-jota`
 
 ```text
 muebleria-jota/
+├── index.html  # Página principal
 ├── pages/      # Páginas HTML
 ├── styles/     # Hojas de estilos
 ├── scripts/    # Lógica JavaScript
@@ -53,5 +55,5 @@ py -m http.server 5500
 Luego abrir en el navegador:
 
 ```text
-http://localhost:5500/muebleria-jota/pages/index.html
+http://localhost:5500/index.html
 ```
