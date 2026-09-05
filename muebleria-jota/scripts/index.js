@@ -44,6 +44,12 @@ function resolveProductImage(imagePath) {
   return new URL(imagePath, import.meta.url).href
 }
 
+function getProductPagePath() {
+  return window.location.pathname.includes("/pages/")
+    ? "product.html"
+    : "muebleria-jota/pages/product.html"
+}
+
 async function renderSingleProduct() {
   const param = new URLSearchParams(window.location.search)
   const product = await getProductById(param.get("id"))
@@ -138,10 +144,10 @@ function renderProductGrid(products) {
   grid.innerHTML = products
     .map(
       (producto) => `
-        <a href="product.html?id=${producto.id}" class="producto-card">
+        <a href="${getProductPagePath()}?id=${producto.id}" class="producto-card">
           <img
             src="${resolveProductImage(producto.imagen)}"
-            alt="${producto.alt}"
+            alt="${capitalizeFirstLetter(producto.nombre)}"
             class="producto-card__image"
             loading="lazy"
             width="400"
@@ -192,8 +198,11 @@ function renderLoadError(container) {
 
 async function resolveRoute() {
   try {
+    const pathName = window.location.pathname
     const currentPage =
-      window.location.pathname.split("/").pop() || "index.html"
+      pathName.endsWith("/") || pathName.endsWith("/index.html")
+        ? "index.html"
+        : pathName.split("/").pop()
 
     switch (currentPage) {
       case "products.html":
