@@ -11,14 +11,18 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
     <script type="module" src="cart.js"></script>
     <script type="module" src="index.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="header__inner">
-        <a href="./index.html" class="header__logo" aria-label="Mueblería Hermanos Jota - Inicio">
+        <a
+          href="./index.html"
+          class="header__logo"
+          aria-label="Mueblería Hermanos Jota - Inicio"
+        >
           <img
             src="assets/logo.svg"
             alt="Hermanos Jota"
@@ -30,16 +34,33 @@
         <nav class="header__nav" aria-label="Navegación principal">
           <ul class="header__nav-list">
             <li><a href="./index.html" class="header__nav-link">Inicio</a></li>
-            <li><a href="./products.html" class="header__nav-link">Productos</a></li>
-            <li><a href="#sobre-nosotros" class="header__nav-link">Sobre Nosotros</a></li>
-            <li><a href="./contacto.html" class="header__nav-link">Contacto</a></li>
+            <li>
+              <a href="./products.html" class="header__nav-link">Productos</a>
+            </li>
+            <li>
+              <a href="./contacto.html" class="header__nav-link">Contacto</a>
+            </li>
           </ul>
         </nav>
         <div class="header__cart">
-            <p class="header__cart-number" id="cart-number"></p>
-            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
-            </svg>
+          <p class="header__cart-number" id="cart-number"></p>
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
+            />
+          </svg>
         </div>
       </div>
     </header>
@@ -76,20 +97,23 @@
           <h2 class="footer__heading">Navegación</h2>
           <ul class="footer__list">
             <li><a href="./index.html" class="footer__link">Inicio</a></li>
-            <li><a href="#productos" class="footer__link">Productos</a></li>
-            <li><a href="#sobre-nosotros" class="footer__link">Sobre Nosotros</a></li>
+            <li>
+              <a href="./products.html" class="footer__link">Productos</a>
+            </li>
             <li><a href="./contacto.html" class="footer__link">Contacto</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h2 class="footer__heading">Contacto</h2>
           <address class="footer__address">
-            <p>Av. San Juan 2847
-              C1232AAB — Barrio de San Cristóbal
-              Ciudad Autónoma de Buenos Aires
-              Argentina</p>
             <p>
-              <a href="tel:+541112345678" class="footer__link">+54 11 4567-8900</a>
+              Av. San Juan 2847 C1232AAB — Barrio de San Cristóbal Ciudad
+              Autónoma de Buenos Aires Argentina
+            </p>
+            <p>
+              <a href="tel:+541112345678" class="footer__link"
+                >+54 11 4567-8900</a
+              >
             </p>
             <p>
               <a href="mailto:ventas@hermanosjota.com.ar" class="footer__link"
