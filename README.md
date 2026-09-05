@@ -14,6 +14,11 @@ Sitio web de e-commerce para la mueblería Hermanos Jota. Permite explorar el ca
 
 El catálogo se carga desde un archivo JSON local y la cantidad del carrito se persiste en el navegador mediante `localStorage`.
 
+## Instalación Clonar el repositorio: 
+```bash
+git clone https://github.com/MunneLautaro/sprints-iniciales.git
+```
+
 ## Tecnologías utilizadas
 
 - HTML5
